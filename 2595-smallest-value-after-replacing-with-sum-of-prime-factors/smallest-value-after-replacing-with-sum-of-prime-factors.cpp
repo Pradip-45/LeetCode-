@@ -22,12 +22,12 @@ public:
         }
         for(int i = sqrt(n); i>1; i--){
             if(n%i == 0 && isPrime(n/i)) {
-            int m = n;
-            while(m % (n/i)==0){
-                sum += n/i;
-                m /= (n/i);
+                int m = n;
+                while(m % (n/i)==0){
+                    sum += n/i;
+                    m /= (n/i);
+                }
             }
-        }
         }
         if(sum==n) return n;
         return smallestValue(sum);
